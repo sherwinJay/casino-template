@@ -72,7 +72,7 @@ input{
 	margin-left: 200px;
 }
 .page-container{
-	padding: 50px 60px;
+	padding: 50px 80px;
 }
 @media(max-width: 1400px){
 	.page-container{

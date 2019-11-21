@@ -77,12 +77,49 @@
         </div>
       </div>
     </section>
-    <section class="page-container other-info-wrapper">
-      <div class="other-info">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+    <section class="page-container home-promo-wrapper">
+      <h2>Promotions</h2>
+      <div class="home-promo">
+        <div>
+          <img src="/images/home/promotions/promo_banner_02.jpg">
+          <div class="promo-content">
+            <h3>Title</h3>
+            <p>
+              Your lucky weekend? Find yourself on a 10x Blackjack winning streak this weekend and you'll be receiving $100!
+            </p>
+            <a class="promo-btn" href="#">查看详情</a>
+          </div>
+        </div>
+        <div>
+          <img src="/images/home/promotions/promo_banner_03.jpg">
+          <div class="promo-content">
+            <h3>Title</h3>
+            <p>
+              Your lucky weekend? Find yourself on a 10x Blackjack winning streak this weekend and you'll be receiving $100!
+            </p>
+            <a class="promo-btn" href="#">查看详情</a>
+          </div>
+        </div>
+        <div>
+          <img src="/images/home/promotions/promo_banner_04.jpg">
+          <div class="promo-content">
+            <h3>Title</h3>
+            <p>
+              Your lucky weekend? Find yourself on a 10x Blackjack winning streak this weekend and you'll be receiving $100!
+            </p>
+            <a class="promo-btn" href="#">查看详情</a>
+          </div>
+        </div>
+        <div>
+          <img src="/images/home/promotions/promo_banner_01.jpg">
+          <div class="promo-content">
+            <h3>Title</h3>
+            <p>
+              Your lucky weekend? Find yourself on a 10x Blackjack winning streak this weekend and you'll be receiving $100!
+            </p>
+            <a class="promo-btn" href="#">查看详情</a>
+          </div>
+        </div>
       </div>
     </section>
   </div>
@@ -207,6 +244,9 @@ export default {
   overflow: hidden;
   position: relative;
 }
+.gm-img-wrapper{
+  border-radius: 7px;
+}
 .bonus-img-wrapper{
   height: 300px;
   background-color: #000;
@@ -268,6 +308,7 @@ export default {
   grid: 143px 143px / repeat(3, 1fr);
   grid-gap: 15px;
 }
+.home-promo-wrapper h2,
 .jackpot-container h2{
   font-size: 32px;
   text-align: center;
@@ -291,14 +332,36 @@ export default {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.other-info{
+.home-promo{
   display: grid;
-  grid: 200px / repeat(4, 1fr);
-  grid-gap: 15px;
+  grid: auto / repeat(4, 1fr);
+  grid-gap: 20px;
   margin-top: 45px;
 }
-.other-info > div{
-  background-color: #000;
+.home-promo > div{
+  max-width: 100%;
+  overflow: hidden;
+}
+.home-promo > div img{
+  max-width: 100%;
+  border-radius: 10px;
+}
+.promo-content{
+  padding: 7px 0;
+}
+.promo-content h3{
+  font-size: 18px;
+  color: #fdea7f;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.promo-btn{
+  padding: 3px 7px;
+  background-color: #e8b238;
+  color: #111;
+  margin-top: 10px;
+  border-radius: 3px;
+  display: inline-block;
 }
 @media(max-width: 1400px){
   .game-grid-container{
