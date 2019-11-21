@@ -63,6 +63,7 @@ h1,h2,h3{
 }
 a, a:hover{
 	text-decoration: none;
+	color: #fff;
 }
 input{
 	color: #000;
@@ -75,6 +76,9 @@ input{
 	padding: 50px 80px;
 }
 @media(max-width: 1400px){
+	body{
+		font-size: 14px;
+	}
 	.page-container{
 		padding: 50px 40px;
 	}

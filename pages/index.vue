@@ -161,6 +161,7 @@ export default {
   height: 100%;
   overflow: hidden;
   position: relative;
+  border-radius: 7px;
 }
 .gm-day-wrapper img{
   transition: transform .5s;
@@ -244,6 +245,7 @@ export default {
   overflow: hidden;
   position: relative;
 }
+.thumbnail,
 .gm-img-wrapper{
   border-radius: 7px;
 }
