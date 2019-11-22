@@ -80,42 +80,14 @@
     <section class="page-container home-promo-wrapper">
       <h2>Promotions</h2>
       <div class="home-promo">
-        <div>
-          <img src="/images/home/promotions/promo_banner_02.jpg">
+        <div
+         v-for="(promo, idx) in promotions"
+          :key="idx">
+          <img :src="promo.src">
           <div class="promo-content">
-            <h3>Title</h3>
+            <h3>{{ promo.title }}</h3>
             <p>
-              Your lucky weekend? Find yourself on a 10x Blackjack winning streak this weekend and you'll be receiving $100!
-            </p>
-            <a class="promo-btn" href="#">查看详情</a>
-          </div>
-        </div>
-        <div>
-          <img src="/images/home/promotions/promo_banner_03.jpg">
-          <div class="promo-content">
-            <h3>Title</h3>
-            <p>
-              Your lucky weekend? Find yourself on a 10x Blackjack winning streak this weekend and you'll be receiving $100!
-            </p>
-            <a class="promo-btn" href="#">查看详情</a>
-          </div>
-        </div>
-        <div>
-          <img src="/images/home/promotions/promo_banner_04.jpg">
-          <div class="promo-content">
-            <h3>Title</h3>
-            <p>
-              Your lucky weekend? Find yourself on a 10x Blackjack winning streak this weekend and you'll be receiving $100!
-            </p>
-            <a class="promo-btn" href="#">查看详情</a>
-          </div>
-        </div>
-        <div>
-          <img src="/images/home/promotions/promo_banner_01.jpg">
-          <div class="promo-content">
-            <h3>Title</h3>
-            <p>
-              Your lucky weekend? Find yourself on a 10x Blackjack winning streak this weekend and you'll be receiving $100!
+              {{ promo.content }}
             </p>
             <a class="promo-btn" href="#">查看详情</a>
           </div>
@@ -142,6 +114,12 @@ export default {
         { src: '/images/home/grimmuerto.jpg', name: 'Grim Muerto' },
         { src: '/images/home/holidayseason.jpg', name: 'Holiday Season' },
         { src: '/images/home/bigwincat.jpg', name: 'Big Win Cat' }
+      ],
+      promotions: [
+        { src: '/images/home/promotions/promo_banner_02.jpg', title: 'Title', content: `Your lucky weekend? Find yourself on a 10x Blackjack winning streak this weekend and you'll be receiving $100!` },
+        { src: '/images/home/promotions/promo_banner_03.jpg', title: 'Title', content: `Your lucky weekend? Find yourself on a 10x Blackjack winning streak this weekend and you'll be receiving $100!` },
+        { src: '/images/home/promotions/promo_banner_04.jpg', title: 'Title', content: `Your lucky weekend? Find yourself on a 10x Blackjack winning streak this weekend and you'll be receiving $100!` },
+        { src: '/images/home/promotions/promo_banner_01.jpg', title: 'Title', content: `Your lucky weekend? Find yourself on a 10x Blackjack winning streak this weekend and you'll be receiving $100!` }
       ]
     }
   },
@@ -334,6 +312,9 @@ export default {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.home-promo-wrapper{
+  background: url(/images/home/promotions/promo-bg.png);
+}
 .home-promo{
   display: grid;
   grid: auto / repeat(4, 1fr);
@@ -358,12 +339,13 @@ export default {
   margin-bottom: 10px;
 }
 .promo-btn{
-  padding: 3px 7px;
+  padding: 5px 9px;
   background-color: #e8b238;
   color: #111;
   margin-top: 10px;
-  border-radius: 3px;
+  border-radius: 15px;
   display: inline-block;
+  font-size: 14px;
 }
 @media(max-width: 1400px){
   .game-grid-container{

@@ -72,10 +72,17 @@ export default {
   overflow: hidden;
 }
 .game_overlay p{
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: bold;
   text-align: center;
   display: block;
   padding: 5px 0;
+  margin: -20px 0 10px;
+}
+.game_overlay{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 @media(max-width: 1400px){
   .featured-games{
@@ -86,6 +93,9 @@ export default {
   }
   .featured-games .swiper-slide .game_overlay a img{
     height: auto;
+  }
+  .game_overlay p{
+    font-size: 14px;
   }
 }
 </style>
